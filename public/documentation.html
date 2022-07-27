@@ -4,22 +4,166 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
   <title>Documentation</title>
 </head>
 <body>
-  <h1>myFlix Documentation Page</h1>
+  <h1 class="title-text">myFlix Documentation Page</h1>
 
-  <p style="margin: auto 50px">This API will be used as the server-side 
-    component for a movie-focused web application called myFlix. 
-    Through this API, the web application will allow users to access
-    details about many different movies, directors and genres. 
-    Users will have the option to create accounts on the site 
-    that will let them create and save lists of their favorite movies. 
-    This web app will function through a well-designed REST API and 
-    architected database built with JavaScript, Node.js, Express and 
-    MongoDB. The REST API will be accessed via commonly-used HTTP methods 
-    like GET and POST, and the common CRUD methods will also be used 
-    for data retrieval from the database and non-relational data storage.
-  </p>
+  <div class="description-text">
+    <p>
+      This API will be used as the server-side 
+      component for a movie-focused web application called myFlix. 
+      Through this API, the web application will allow users to access
+      details about many different movies, directors and genres. 
+      Users will have the option to create accounts on the site 
+      that will let them create and save lists of their favorite movies. 
+      This web app will function through a well-designed REST API and 
+      architected database built with JavaScript, Node.js, Express and 
+      MongoDB. The REST API will be accessed via commonly-used HTTP methods 
+      like GET and POST, and the common CRUD methods will also be used 
+      for data retrieval from the database and non-relational data storage.
+    </p>
+  </div>
+
+  <table class="description-table">
+    <tr>
+      <th>Business Logic</th>
+      <th>HTTP Method</th>
+      <th>Request</th>
+      <th>URL</th>
+      <th>Response</th>
+    </tr>
+    <tr>
+      <td>Return a list of ALL movies to the user</td>
+      <td>GET</td>
+      <td>None</td>
+      <td>/movies</td>
+      <td>A JSON object containing data from every movie</td>
+    </tr>
+    <tr>
+      <td>Return data about a single movie by title to the user</td>
+      <td>GET</td>
+      <td>None</td>
+      <td>/movies/:title</td>
+      <td>A JSON object containing all data about a single movie including its description, genre, director, image URL and whether it's featured or not
+<span class="example-text">
+{
+  "Title": "Joker",
+  "Description": "A mentally troubled stand-up comedian embarks on a downward spiral that leads to the creation of an iconic villain.",
+  "Genre": {
+      "Name": "Crime",
+      "Description": "Crime fiction, detective story, murder mystery, mystery novel, and police novel are terms used to describe narratives that centre on criminal acts and especially on the investigation, either by an amateur or a professional detective, of a crime, often a murder.[1] It is usually distinguished from mainstream fiction and other genres such as historical fiction or science fiction, but the boundaries are indistinct. Crime fiction has multiple subgenres,[2] including detective fiction (such as the whodunit), courtroom drama, hard-boiled fiction, and legal thrillers. Most crime drama focuses on crime investigation and does not feature the courtroom. Suspense and mystery are key elements that are nearly ubiquitous to the genre."
+  },
+  "Director": {
+      "Name": "Todd Phillips",
+      "Bio": "Todd Phillips is an American filmmaker and actor who got his start by directing the comedy films Road Trip and Old School, the earlier inspired EuroTrip. He also directed Starsky & Hutch, The Hangover trilogy, Due Date, War Dogs and School for Scoundrels. Phillips directed Joker, a Taxi Driver style film set in the universe of Batman and starring Joaquin Phoenix. Joker is the highest grossing R-rated film of all time.",
+      "Birth": 1970
+  },
+  "ImageURL": "https://upload.wikimedia.org/wikipedia/en/e/e1/Joker_%282019_film%29_poster.jpg",
+  "Featured": false
+}
+</span>
+      </td>
+    </tr>
+    <tr>
+      <td>Return data about a genre by name/title</td>
+      <td>GET</td>
+      <td>None</td>
+      <td>/movies/genre/genreName</td>
+      <td>A JSON object containing all data about a single genre including its name (e.g., "Thriller") and description
+<span class="example-text">
+{
+  "Name": "Crime",
+  "Description": "Crime fiction, detective story, murder mystery, mystery novel, and police novel are terms used to describe narratives that centre on criminal acts and especially on the investigation, either by an amateur or a professional detective, of a crime, often a murder.[1] It is usually distinguished from mainstream fiction and other genres such as historical fiction or science fiction, but the boundaries are indistinct. Crime fiction has multiple subgenres,[2] including detective fiction (such as the whodunit), courtroom drama, hard-boiled fiction, and legal thrillers. Most crime drama focuses on crime investigation and does not feature the courtroom. Suspense and mystery are key elements that are nearly ubiquitous to the genre."
+}
+</span>
+      </td>
+    </tr>
+    <tr>
+      <td>Return data about a director by name</td>
+      <td>GET</td>
+      <td>None</td>
+      <td>/movies/directors/:directorName</td>
+      <td>A JSON object containing all data about a single director including name, bio and birth year
+<span class="example-text">
+{
+  "Name": "Todd Phillips",
+  "Bio": "Todd Phillips is an American filmmaker and actor who got his start by directing the comedy films Road Trip and Old School, the earlier inspired EuroTrip. He also directed Starsky & Hutch, The Hangover trilogy, Due Date, War Dogs and School for Scoundrels. Phillips directed Joker, a Taxi Driver style film set in the universe of Batman and starring Joaquin Phoenix. Joker is the highest grossing R-rated film of all time.",
+  "Birth": 1970
+}
+</span>
+      </td>
+    </tr>
+    <tr>
+      <td>Allow new users to register</td>
+      <td>POST</td>
+      <td>JSON object holding data about the new user including their name and favoriteMovies 
+<span class="example-text">
+{
+  "name": "Jane Doe",
+  "favoriteMovies": [
+      "Animal World",
+      "Pulp Fiction"
+  ]
+}
+</span>
+      </td>
+      <td>/users</td>
+      <td>A JSON object containing data about the new user including their name, favoriteMovies and id
+<span class="example-text">
+{
+  "name": "Jane Doe",
+  "favoriteMovies": [
+      "Animal World",
+      "Pulp Fiction"
+  ],
+  "id": "77c384ff-6c12-4b16-bebc-ee347468ad77"
+}
+</span>
+      </td>
+    </tr>
+    <tr>
+      <td>Allow users to update their user info</td>
+      <td>PUT</td>
+      <td>A JSON object containing data to update the given user's name
+<span class="example-text">
+{
+  "name": "Kim Jones"
+}
+</span>
+      </td>
+      <td>/users/:id</td>
+      <td>A JSON object containing data about the user including their id and the new username
+<span class="example-text">
+{
+  "id": 1,
+  "name": "Kim Jones"
+}
+</span>
+      </td>
+    </tr>
+    <tr>
+      <td>Allow users to add a movie to their list of favorites</td>
+      <td>POST</td>
+      <td>None</td>
+      <td>/users/:id/:movieTitle</td>
+      <td>A text message indicating whether or not the movie was successfully added to the user's array</td>
+    </tr>
+    <tr>
+      <td>Allow users to remove a movie from their list of favorites</td>
+      <td>DELETE</td>
+      <td>None</td>
+      <td>/movies/:id/:movieTitle</td>
+      <td>A text message indicating whether or not the movie was successfully removed from the user's array</td>
+    </tr>
+    <tr>
+      <td>Allow existing users to deregister</td>
+      <td>DELETE</td>
+      <td>None</td>
+      <td>/users/:id</td>
+      <td>A text message indicating whether or not the user's data has been successfully deleted</td>
+    </tr>
+  </table>
 </body>
 </html>

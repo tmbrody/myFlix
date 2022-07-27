@@ -1,0 +1,12 @@
+[
+  {
+    "id":1,
+    "name":"Kim",
+    "favoriteMovies": []
+  },
+  {
+    "id":2,
+    "name":"Joe",
+    "favoriteMovies": ["Pulp Fiction"]
+  }
+]

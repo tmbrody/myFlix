@@ -82,13 +82,16 @@
     "type-check": "^0.4.0",
     "type-fest": "^0.20.2",
     "uri-js": "^4.4.1",
+    "uuid": "^8.3.2",
     "v8-compile-cache": "^2.3.0",
     "which": "^2.0.2",
     "word-wrap": "^1.2.3",
     "wrappy": "^1.0.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -100,5 +103,8 @@
   "bugs": {
     "url": "https://github.com/tmbrody/myFlix/issues"
   },
-  "homepage": "https://github.com/tmbrody/myFlix#readme"
+  "homepage": "https://github.com/tmbrody/myFlix#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
 }
