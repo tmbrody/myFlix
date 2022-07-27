@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+tr, th, td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.description-table {
+  min-width: 50%;
+  margin: 20px;
+}
+
+.description-text {
+  margin: auto 50px;
+  font-size: larger;
+}
+
+.example-text {
+  color: #5d5dfb;
+  white-space: pre-wrap;
+}
+
+.title-text {
+  text-align: center;
+}
