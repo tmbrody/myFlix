@@ -1,22 +1,24 @@
 [
   {
-    "Title":"Animal World",
-    "Description":"A man finds himself deep in debt and is coerced to board a ship that hosts a risky gambling party.",
+    "Title": "Animal World",
+    "Description": "A man finds himself deep in debt and is coerced to board a ship that hosts a risky gambling party.",
+    "ReleaseYear": 2018,
     "Genre": {
-      "Name":"Action",
-      "Description":"Action film is a film genre in which the protagonist is thrust into a series of events that typically involve violence and physical feats. The genre tends to feature a mostly resourceful hero struggling against incredible odds, which include life-threatening situations, a dangerous villain, or a pursuit which usually concludes in victory for the hero."
+      "Name": "Action",
+      "Description": "Action film is a film genre in which the protagonist is thrust into a series of events that typically involve violence and physical feats. The genre tends to feature a mostly resourceful hero struggling against incredible odds, which include life-threatening situations, a dangerous villain, or a pursuit which usually concludes in victory for the hero."
     },
     "Director": {
-      "Name":"Yan Han",
-      "Bio":"We don't have a biography for Yan Han.",
-      "Birth":1983
+      "Name": "Yan Han",
+      "Bio": "We don't have a biography for Yan Han.",
+      "Birth": 1983
     },
-    "ImageURL":"https://upload.wikimedia.org/wikipedia/en/0/06/Animal_World_Movie_2018.jpg",
-    "Featured":false
+    "ImageURL": "https://upload.wikimedia.org/wikipedia/en/0/06/Animal_World_Movie_2018.jpg",
+    "Featured": true
   },
   {
     "Title":"Joker",
     "Description":"A mentally troubled stand-up comedian embarks on a downward spiral that leads to the creation of an iconic villain.",
+    "ReleaseYear":2019,
     "Genre": {
       "Name":"Crime",
       "Description":"Crime fiction, detective story, murder mystery, mystery novel, and police novel are terms used to describe narratives that centre on criminal acts and especially on the investigation, either by an amateur or a professional detective, of a crime, often a murder.[1] It is usually distinguished from mainstream fiction and other genres such as historical fiction or science fiction, but the boundaries are indistinct. Crime fiction has multiple subgenres,[2] including detective fiction (such as the whodunit), courtroom drama, hard-boiled fiction, and legal thrillers. Most crime drama focuses on crime investigation and does not feature the courtroom. Suspense and mystery are key elements that are nearly ubiquitous to the genre."
@@ -32,6 +34,7 @@
   {
     "Title": "Pulp Fiction",
     "Description":"The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+    "ReleaseYear":1994,
     "Genre": {
       "Name":"Crime",
       "Description":"Crime fiction, detective story, murder mystery, mystery novel, and police novel are terms used to describe narratives that centre on criminal acts and especially on the investigation, either by an amateur or a professional detective, of a crime, often a murder.[1] It is usually distinguished from mainstream fiction and other genres such as historical fiction or science fiction, but the boundaries are indistinct. Crime fiction has multiple subgenres,[2] including detective fiction (such as the whodunit), courtroom drama, hard-boiled fiction, and legal thrillers. Most crime drama focuses on crime investigation and does not feature the courtroom. Suspense and mystery are key elements that are nearly ubiquitous to the genre."
@@ -47,9 +50,10 @@
   {
     "Title":"Punch-Drunk Love",
     "Description":"Socially frustrated Barry Egan calls a phone-sex line to curb his loneliness. Little does he know it will land him in deep trouble and will jeopardize his burgeoning romance with the mysterious Lena.",
+    "ReleaseYear":2002,
     "Genre": {
       "Name":"Comedy",
-      "Description":"Comedy is a genre of fiction that consists of discourses or works intended to be humorous or amusing by inducing laughter, especially in theatre, film, stand-up comedy, television, radio, books, or any other entertainment medium. The term originated in ancient Greece: in Athenian democracy, the public opinion of voters was influenced by political satire performed by comic poets in theaters. The theatrical genre of Greek comedy can be described as a dramatic performance pitting two groups, ages, genders, or societies against each other in an amusing agon or conflict. Northrop Frye depicted these two opposing sides as a 'Society of Youth' and a 'Society of the Old'. A revised view characterizes the essential agon of comedy as a struggle between a relatively powerless youth and the societal conventions posing obstacles to his hopes. In this struggle, the youth then becomes constrained by his lack of social authority, and is left with little choice but to resort to ruses which engender dramatic irony, which provokes laughter."
+      "Description":"Comedy is a genre of fiction that consists of discourses or works intended to be humorous or amusing by inducing laughter, especially in theatre, film, stand-up comedy, television, radio, books, or any other entertainment medium. The theatrical genre of Greek comedy can be described as a dramatic performance pitting two groups, ages, genders, or societies against each other in an amusing agon or conflict. Northrop Frye depicted these two opposing sides as a 'Society of Youth' and a 'Society of the Old'. A revised view characterizes the essential agon of comedy as a struggle between a relatively powerless youth and the societal conventions posing obstacles to his hopes. In this struggle, the youth then becomes constrained by his lack of social authority, and is left with little choice but to resort to ruses which engender dramatic irony, which provokes laughter."
     },
     "Director": { 
       "Name":"Paul Thomas Anderson",
@@ -62,6 +66,7 @@
   {
     "Title":"Zodiac",
     "Description":"Between 1968 and 1983, a San Francisco cartoonist becomes an amateur detective obsessed with tracking down the Zodiac Killer, an unidentified individual who terrorizes Northern California with a killing spree.",
+    "ReleaseYear":2007,
     "Genre": {
       "Name":"Crime",
       "Description":"Crime fiction, detective story, murder mystery, mystery novel, and police novel are terms used to describe narratives that centre on criminal acts and especially on the investigation, either by an amateur or a professional detective, of a crime, often a murder.[1] It is usually distinguished from mainstream fiction and other genres such as historical fiction or science fiction, but the boundaries are indistinct. Crime fiction has multiple subgenres,[2] including detective fiction (such as the whodunit), courtroom drama, hard-boiled fiction, and legal thrillers. Most crime drama focuses on crime investigation and does not feature the courtroom. Suspense and mystery are key elements that are nearly ubiquitous to the genre."
@@ -77,6 +82,7 @@
   {
     "Title":"The Double",
     "Description":"The unenviable life of a government-agency clerk takes a horrific turn with the arrival of a new co-worker who is both his exact physical double and his opposite otherwise--he's a confident, charismatic ladies' man.",
+    "ReleaseYear":2013,
     "Genre": {
       "Name":"Comedy",
       "Description": "Comedy is a genre of fiction that consists of discourses or works intended to be humorous or amusing by inducing laughter, especially in theatre, film, stand-up comedy, television, radio, books, or any other entertainment medium. The term originated in ancient Greece: in Athenian democracy, the public opinion of voters was influenced by political satire performed by comic poets in theaters. The theatrical genre of Greek comedy can be described as a dramatic performance pitting two groups, ages, genders, or societies against each other in an amusing agon or conflict. Northrop Frye depicted these two opposing sides as a 'Society of Youth' and a 'Society of the Old'. A revised view characterizes the essential agon of comedy as a struggle between a relatively powerless youth and the societal conventions posing obstacles to his hopes. In this struggle, the youth then becomes constrained by his lack of social authority, and is left with little choice but to resort to ruses which engender dramatic irony, which provokes laughter."
@@ -92,6 +98,7 @@
   {
     "Title":"The Big Lebowski",
     "Description":"Ultimate L.A. slacker Jeff 'The Dude' Lebowski, mistaken for a millionaire of the same name, seeks restitution for a rug ruined by debt collectors, enlisting his bowling buddies for help while trying to find the millionaire's missing wife.",
+    "ReleaseYear":1998,
     "Genre": {
       "Name":"Comedy",
       "Description":"Comedy is a genre of fiction that consists of discourses or works intended to be humorous or amusing by inducing laughter, especially in theatre, film, stand-up comedy, television, radio, books, or any other entertainment medium. The term originated in ancient Greece: in Athenian democracy, the public opinion of voters was influenced by political satire performed by comic poets in theaters. The theatrical genre of Greek comedy can be described as a dramatic performance pitting two groups, ages, genders, or societies against each other in an amusing agon or conflict. Northrop Frye depicted these two opposing sides as a 'Society of Youth' and a 'Society of the Old'. A revised view characterizes the essential agon of comedy as a struggle between a relatively powerless youth and the societal conventions posing obstacles to his hopes. In this struggle, the youth then becomes constrained by his lack of social authority, and is left with little choice but to resort to ruses which engender dramatic irony, which provokes laughter."
@@ -107,6 +114,7 @@
   {
     "Title":"Amélie",
     "Description":"Amélie is an innocent and naive girl in Paris with her own sense of justice. She decides to help those around her and, along the way, discovers love.",
+    "ReleaseYear":2001,
     "Genre": {
       "Name":"Comedy",
       "Description":"Comedy is a genre of fiction that consists of discourses or works intended to be humorous or amusing by inducing laughter, especially in theatre, film, stand-up comedy, television, radio, books, or any other entertainment medium. The term originated in ancient Greece: in Athenian democracy, the public opinion of voters was influenced by political satire performed by comic poets in theaters. The theatrical genre of Greek comedy can be described as a dramatic performance pitting two groups, ages, genders, or societies against each other in an amusing agon or conflict. Northrop Frye depicted these two opposing sides as a 'Society of Youth' and a 'Society of the Old'. A revised view characterizes the essential agon of comedy as a struggle between a relatively powerless youth and the societal conventions posing obstacles to his hopes. In this struggle, the youth then becomes constrained by his lack of social authority, and is left with little choice but to resort to ruses which engender dramatic irony, which provokes laughter."
@@ -122,6 +130,7 @@
   {
     "Title":"Saving Private Ryan",
     "Description":"Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.",
+    "ReleaseYear":1998,
     "Genre": {
       "Name":"Drama",
       "Description":"In film and television, drama is a category or genre of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.[1] Drama of this kind is usually qualified with additional terms that specify its particular super-genre, macro-genre, or micro-genre,[2] such as soap opera, police crime drama, political drama, legal drama, historical drama, domestic drama, teen drama, and comedy-drama (dramedy). These terms tend to indicate a particular setting or subject-matter, or else they qualify the otherwise serious tone of a drama with elements that encourage a broader range of moods. To these ends, a primary element in a drama is the occurrence of conflict—emotional, social, or otherwise—and its resolution in the course of the storyline."
@@ -137,6 +146,7 @@
   {
     "Title":"Newsies",
     "Description":"A musical based on the New York City newsboy strike of 1899. When young newspaper sellers are exploited beyond reason by their bosses they set out to enact change and are met by the ruthlessness of big business.",
+    "ReleaseYear":1992,
     "Genre": {
       "Name":"Drama",
       "Description":"In film and television, drama is a category or genre of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.[1] Drama of this kind is usually qualified with additional terms that specify its particular super-genre, macro-genre, or micro-genre,[2] such as soap opera, police crime drama, political drama, legal drama, historical drama, domestic drama, teen drama, and comedy-drama (dramedy). These terms tend to indicate a particular setting or subject-matter, or else they qualify the otherwise serious tone of a drama with elements that encourage a broader range of moods. To these ends, a primary element in a drama is the occurrence of conflict—emotional, social, or otherwise—and its resolution in the course of the storyline."
@@ -147,6 +157,38 @@
       "Birth":1950
     },
     "ImageURL":"https://upload.wikimedia.org/wikipedia/en/5/53/Newsies-Poster.jpg",
+    "Featured":false
+  },
+  {
+    "Title":"Kill Bill: Vol. 1",
+    "Description":"After awakening from a four-year coma, a former assassin wreaks vengeance on the team of assassins who betrayed her.",
+    "ReleaseYear":2003,
+    "Genre": {
+      "Name":"Action",
+      "Description":"Action film is a film genre in which the protagonist is thrust into a series of events that typically involve violence and physical feats. The genre tends to feature a mostly resourceful hero struggling against incredible odds, which include life-threatening situations, a dangerous villain, or a pursuit which usually concludes in victory for the hero."
+    },
+    "Director": { 
+      "Name":"Quentin Tarantino",
+      "Bio": "In January of 1992, first-time writer-director Tarantino's Reservoir Dogs (1992) appeared at the Sundance Film Festival. The film garnered critical acclaim and the director became a legend immediately. Two years later, he followed up Dogs success with Pulp Fiction (1994) which premiered at the Cannes film festival, winning the coveted Palme D'Or Award. At the 1995 Academy Awards, it was nominated for the best picture, best director and best original screenplay. Tarantino and writing partner Roger Avary came away with the award only for best original screenplay. In 1995, Tarantino directed one fourth of the anthology Four Rooms (1995) with friends and fellow auteurs Alexandre Rockwell, Robert Rodriguez and Allison Anders. The film opened December 25 in the United States to very weak reviews. Tarantino's next film was From Dusk Till Dawn (1996), a vampire/crime story which he wrote and co-starred with George Clooney. The film did fairly well theatrically. Since then, Tarantino has helmed several critically and financially successful films, including Jackie Brown (1997), Kill Bill: Vol. 1 (2003), Kill Bill: Vol. 2 (2004), Inglourious Basterds (2009), Django Unchained (2012) and The Hateful Eight (2015).",
+      "Birth":1963
+    },
+    "ImageURL":"https://upload.wikimedia.org/wikipedia/en/2/2c/Kill_Bill_Volume_1.png",
+    "Featured":false
+  },
+  {
+    "Title":"Kill Bill: Vol. 2",
+    "Description":"The Bride continues her quest of vengeance against her former boss and lover Bill, the reclusive bouncer Budd, and the treacherous, one-eyed Elle.",
+    "ReleaseYear":2004,
+    "Genre": {
+      "Name":"Action",
+      "Description":"Action film is a film genre in which the protagonist is thrust into a series of events that typically involve violence and physical feats. The genre tends to feature a mostly resourceful hero struggling against incredible odds, which include life-threatening situations, a dangerous villain, or a pursuit which usually concludes in victory for the hero."
+    },
+    "Director": { 
+      "Name":"Quentin Tarantino",
+      "Bio": "In January of 1992, first-time writer-director Tarantino's Reservoir Dogs (1992) appeared at the Sundance Film Festival. The film garnered critical acclaim and the director became a legend immediately. Two years later, he followed up Dogs success with Pulp Fiction (1994) which premiered at the Cannes film festival, winning the coveted Palme D'Or Award. At the 1995 Academy Awards, it was nominated for the best picture, best director and best original screenplay. Tarantino and writing partner Roger Avary came away with the award only for best original screenplay. In 1995, Tarantino directed one fourth of the anthology Four Rooms (1995) with friends and fellow auteurs Alexandre Rockwell, Robert Rodriguez and Allison Anders. The film opened December 25 in the United States to very weak reviews. Tarantino's next film was From Dusk Till Dawn (1996), a vampire/crime story which he wrote and co-starred with George Clooney. The film did fairly well theatrically. Since then, Tarantino has helmed several critically and financially successful films, including Jackie Brown (1997), Kill Bill: Vol. 1 (2003), Kill Bill: Vol. 2 (2004), Inglourious Basterds (2009), Django Unchained (2012) and The Hateful Eight (2015).",
+      "Birth":1963
+    },
+    "ImageURL":"https://upload.wikimedia.org/wikipedia/en/c/c4/Kill_Bill_Volume_2.png",
     "Featured":false
   }
 ]

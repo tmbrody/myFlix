@@ -13,6 +13,18 @@ app.use(bodyParser.json());
 app.use(morgan('common'));
 
 
+app.get('/users/:id/favoriteMovies', (req, res) => {
+  const { id } = req.params;
+  const favoriteMovies = users.find( user => user.id === parseInt(id) ).favoriteMovies;
+
+  if (favoriteMovies) {
+    res.status(200).json(favoriteMovies);
+  } else {
+    res.status(400).send('This user has no favorite movies');
+  }
+
+});
+
 app.post('/users', (req, res) => {
   const newUser = req.body;
 
@@ -30,11 +42,10 @@ app.put('/users/:id', (req, res) => {
   const { id } = req.params;
   const updatedUser = req.body;
 
-  let user = users.find( user => user.id == id );
+  let user = users.find( user => user.id === parseInt(id) );
 
   if (user) {
     user.name = updatedUser.name;
-    user.favoriteMovies = updatedUser.favoriteMovies;
     res.status(200).json(user);
   } else {
     res.status(400).send('No such user');
@@ -124,6 +135,18 @@ app.get("/movies/directors/:directorName", (req, res) => {
     res.status(200).json(director);
   } else {
     res.status(400).send('No such director');
+  }
+
+});
+
+app.get("/movies/year/:ReleaseYear", (req, res) => {
+  const { ReleaseYear } = req.params;
+  const year = movies.filter( movie => movie.ReleaseYear === parseInt(ReleaseYear) );
+
+  if (year) {
+    res.status(200).json(year);
+  } else {
+    res.status(400).send("Currently no movies for that year");
   }
 
 });

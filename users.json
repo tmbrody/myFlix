@@ -1,12 +1,56 @@
 [
   {
     "id":1,
-    "name":"Kim",
-    "favoriteMovies": []
+    "username":"Kim",
+    "password":"elephant",
+    "email":"kim@example.com",
+    "birth_date":"06/15/1989",
+    "favoriteMovies": [
+      "Joker",
+      "Pulp Fiction"
+    ]
   },
   {
     "id":2,
-    "name":"Joe",
+    "username":"Joe",
+    "password":"testing12345",
+    "email":"joe@example.com",
+    "birth_date":"08/22/1992",
     "favoriteMovies": ["Pulp Fiction"]
+  },
+  {
+    "id":3,
+    "username":"Sam",
+    "password":"drowssap",
+    "email":"sam@example.com",
+    "birth_date":"02/27/1994",
+    "favoriteMovies": [
+      "Animal World",
+      "Saving Private Ryan",
+      "The Big Lebowski"
+    ]
+  },
+  {
+    "id":4,
+    "username":"Ben",
+    "password":"!nc0rr3ct",
+    "email":"ben@example.com",
+    "birth_date":"05/11/1998",
+    "favoriteMovies": [
+      "Punch-Drunk Love",
+      "The Double"
+    ]
+  },
+  {
+    "id":5,
+    "username":"John",
+    "password":"word pass",
+    "email":"john@example.com",
+    "birth_date":"09/30/2000",
+    "favoriteMovies": [
+      "Zodiac",
+      "Newsies",
+      "Amélie"
+    ]
   }
 ]
