@@ -96,6 +96,50 @@
       </td>
     </tr>
     <tr>
+      <td>Return data about one or more movies by release year</td>
+      <td>GET</td>
+      <td>None</td>
+      <td>/movies/year/:ReleaseYear</td>
+      <td>A JSON object containing all data about one or more movies including the description, genre, director, image URL and featured status
+<span class="example-text">
+[
+  {
+    "Title": "The Big Lebowski",
+    "Description": "Ultimate L.A. slacker Jeff 'The Dude' Lebowski, mistaken for a millionaire of the same name, seeks restitution for a rug ruined by debt collectors, enlisting his bowling buddies for help while trying to find the millionaire's missing wife.",
+    "ReleaseYear": 1998,
+    "Genre": {
+        "Name": "Comedy",
+        "Description": "Comedy is a genre of fiction that consists of discourses or works intended to be humorous or amusing by inducing laughter, especially in theatre, film, stand-up comedy, television, radio, books, or any other entertainment medium. The term originated in ancient Greece: in Athenian democracy, the public opinion of voters was influenced by political satire performed by comic poets in theaters. The theatrical genre of Greek comedy can be described as a dramatic performance pitting two groups, ages, genders, or societies against each other in an amusing agon or conflict. Northrop Frye depicted these two opposing sides as a 'Society of Youth' and a 'Society of the Old'. A revised view characterizes the essential agon of comedy as a struggle between a relatively powerless youth and the societal conventions posing obstacles to his hopes. In this struggle, the youth then becomes constrained by his lack of social authority, and is left with little choice but to resort to ruses which engender dramatic irony, which provokes laughter."
+    },
+    "Director": {
+        "Name": "Joel Coen",
+        "Bio": "Joel Daniel Coen is an American filmmaker who regularly collaborates with his younger brother Ethan. They made Raising Arizona, Barton Fink, Fargo, The Big Lebowski, True Grit, O Brother Where Art Thou?, Burn After Reading, A Serious Man, Inside Llewyn Davis, Hail Caesar and other projects. Joel married actress Frances McDormand in 1984 and had an adopted son.",
+        "Birth": 1954
+    },
+    "ImageURL": "https://upload.wikimedia.org/wikipedia/en/3/35/Biglebowskiposter.jpg",
+    "Featured": false
+  },
+  {
+    "Title": "Saving Private Ryan",
+    "Description": "Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.",
+    "ReleaseYear": 1998,
+    "Genre": {
+        "Name": "Drama",
+        "Description": "In film and television, drama is a category or genre of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.[1] Drama of this kind is usually qualified with additional terms that specify its particular super-genre, macro-genre, or micro-genre,[2] such as soap opera, police crime drama, political drama, legal drama, historical drama, domestic drama, teen drama, and comedy-drama (dramedy). These terms tend to indicate a particular setting or subject-matter, or else they qualify the otherwise serious tone of a drama with elements that encourage a broader range of moods. To these ends, a primary element in a drama is the occurrence of conflict—emotional, social, or otherwise—and its resolution in the course of the storyline."
+    },
+    "Director": {
+        "Name": "Steven Spielberg",
+        "Bio": "One of the most influential personalities in the history of cinema, Steven Spielberg is Hollywood's best known director and one of the wealthiest filmmakers in the world. He has an extraordinary number of commercially successful and critically acclaimed credits to his name, either as a director, producer or writer since launching the summer blockbuster with Jaws (1975), and he has done more to define popular film-making since the mid-1970s than anyone else.",
+        "Birth": 1946
+    },
+    "ImageURL": "https://upload.wikimedia.org/wikipedia/en/a/ac/Saving_Private_Ryan_poster.jpg",
+    "Featured": false
+  }
+]
+</span>
+      </td>
+    </tr>
+    <tr>
       <td>Allow new users to register</td>
       <td>POST</td>
       <td>JSON object holding data about the new user including their name and favoriteMovies 
@@ -163,6 +207,21 @@
       <td>None</td>
       <td>/users/:id</td>
       <td>A text message indicating whether or not the user's data has been successfully deleted</td>
+    </tr>
+    <tr>
+      <td>Return the titles of any favorite movies that a user may have</td>
+      <td>GET</td>
+      <td>None</td>
+      <td>/users/:id/favoriteMovies</td>
+      <td>A JSON object containing an array of every movie title that a specific user has added to their favorites list
+<span class="example-text">
+[
+  "Animal World",
+  "Saving Private Ryan",
+  "The Big Lebowski"
+]
+</span>
+      </td>
     </tr>
   </table>
 </body>
