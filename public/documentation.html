@@ -49,33 +49,41 @@
       <td>A JSON object containing all data about a single movie including its description, genre, director, image URL and whether it's featured or not
 <span class="example-text">
 {
-  "Title": "Joker",
-  "Description": "A mentally troubled stand-up comedian embarks on a downward spiral that leads to the creation of an iconic villain.",
   "Genre": {
       "Name": "Crime",
-      "Description": "Crime fiction, detective story, murder mystery, mystery novel, and police novel are terms used to describe narratives that centre on criminal acts and especially on the investigation, either by an amateur or a professional detective, of a crime, often a murder.[1] It is usually distinguished from mainstream fiction and other genres such as historical fiction or science fiction, but the boundaries are indistinct. Crime fiction has multiple subgenres,[2] including detective fiction (such as the whodunit), courtroom drama, hard-boiled fiction, and legal thrillers. Most crime drama focuses on crime investigation and does not feature the courtroom. Suspense and mystery are key elements that are nearly ubiquitous to the genre."
+      "Description": "Crime fiction, detective story, murder mystery, mystery novel, and police novel are terms used to describe narratives that centre on criminal acts and especially on the investigation, either by an amateur or a professional detective, of a crime, often a murder. It is usually distinguished from mainstream fiction and other genres such as historical fiction or science fiction, but the boundaries are indistinct. Crime fiction has multiple subgenres, including detective fiction (such as the whodunit), courtroom drama, hard-boiled fiction, and legal thrillers. Most crime drama focuses on crime investigation and does not feature the courtroom. Suspense and mystery are key elements that are nearly ubiquitous to the genre."
   },
   "Director": {
       "Name": "Todd Phillips",
       "Bio": "Todd Phillips is an American filmmaker and actor who got his start by directing the comedy films Road Trip and Old School, the earlier inspired EuroTrip. He also directed Starsky & Hutch, The Hangover trilogy, Due Date, War Dogs and School for Scoundrels. Phillips directed Joker, a Taxi Driver style film set in the universe of Batman and starring Joaquin Phoenix. Joker is the highest grossing R-rated film of all time.",
       "Birth": 1970
   },
+  "_id": "62e9a4a8e4da723567a25c54",
+  "Title": "Joker",
+  "Description": "Updated: A mentally troubled stand-up comedian embarks on a downward spiral that leads to the creation of an iconic villain.",
+  "ReleaseYear": 2019,
   "ImageURL": "https://upload.wikimedia.org/wikipedia/en/e/e1/Joker_%282019_film%29_poster.jpg",
-  "Featured": false
+  "Featured": false,
+  "Stars": [
+      "Joaquin Phoenix",
+      "Robert De Niro",
+      "Zazie Beetz"
+  ]
 }
 </span>
       </td>
     </tr>
     <tr>
-      <td>Return data about a genre by name/title</td>
+      <td>Return data about a genre by name</td>
       <td>GET</td>
       <td>None</td>
       <td>/movies/genre/genreName</td>
       <td>A JSON object containing all data about a single genre including its name (e.g., "Thriller") and description
 <span class="example-text">
 {
+  "_id": "62edf8134169d9aa503e9f7a",
   "Name": "Crime",
-  "Description": "Crime fiction, detective story, murder mystery, mystery novel, and police novel are terms used to describe narratives that centre on criminal acts and especially on the investigation, either by an amateur or a professional detective, of a crime, often a murder.[1] It is usually distinguished from mainstream fiction and other genres such as historical fiction or science fiction, but the boundaries are indistinct. Crime fiction has multiple subgenres,[2] including detective fiction (such as the whodunit), courtroom drama, hard-boiled fiction, and legal thrillers. Most crime drama focuses on crime investigation and does not feature the courtroom. Suspense and mystery are key elements that are nearly ubiquitous to the genre."
+  "Description": "Crime fiction, detective story, murder mystery, mystery novel, and police novel are terms used to describe narratives that centre on criminal acts and especially on the investigation, either by an amateur or a professional detective, of a crime, often a murder. It is usually distinguished from mainstream fiction and other genres such as historical fiction or science fiction, but the boundaries are indistinct. Crime fiction has multiple subgenres, including detective fiction (such as the whodunit), courtroom drama, hard-boiled fiction, and legal thrillers. Most crime drama focuses on crime investigation and does not feature the courtroom. Suspense and mystery are key elements that are nearly ubiquitous to the genre."
 }
 </span>
       </td>
@@ -88,6 +96,7 @@
       <td>A JSON object containing all data about a single director including name, bio and birth year
 <span class="example-text">
 {
+  "_id": "62edf9eb4169d9aa503e9f7e",
   "Name": "Todd Phillips",
   "Bio": "Todd Phillips is an American filmmaker and actor who got his start by directing the comedy films Road Trip and Old School, the earlier inspired EuroTrip. He also directed Starsky & Hutch, The Hangover trilogy, Due Date, War Dogs and School for Scoundrels. Phillips directed Joker, a Taxi Driver style film set in the universe of Batman and starring Joaquin Phoenix. Joker is the highest grossing R-rated film of all time.",
   "Birth": 1970
@@ -104,37 +113,104 @@
 <span class="example-text">
 [
   {
-    "Title": "The Big Lebowski",
-    "Description": "Ultimate L.A. slacker Jeff 'The Dude' Lebowski, mistaken for a millionaire of the same name, seeks restitution for a rug ruined by debt collectors, enlisting his bowling buddies for help while trying to find the millionaire's missing wife.",
-    "ReleaseYear": 1998,
-    "Genre": {
-        "Name": "Comedy",
-        "Description": "Comedy is a genre of fiction that consists of discourses or works intended to be humorous or amusing by inducing laughter, especially in theatre, film, stand-up comedy, television, radio, books, or any other entertainment medium. The term originated in ancient Greece: in Athenian democracy, the public opinion of voters was influenced by political satire performed by comic poets in theaters. The theatrical genre of Greek comedy can be described as a dramatic performance pitting two groups, ages, genders, or societies against each other in an amusing agon or conflict. Northrop Frye depicted these two opposing sides as a 'Society of Youth' and a 'Society of the Old'. A revised view characterizes the essential agon of comedy as a struggle between a relatively powerless youth and the societal conventions posing obstacles to his hopes. In this struggle, the youth then becomes constrained by his lack of social authority, and is left with little choice but to resort to ruses which engender dramatic irony, which provokes laughter."
-    },
-    "Director": {
-        "Name": "Joel Coen",
-        "Bio": "Joel Daniel Coen is an American filmmaker who regularly collaborates with his younger brother Ethan. They made Raising Arizona, Barton Fink, Fargo, The Big Lebowski, True Grit, O Brother Where Art Thou?, Burn After Reading, A Serious Man, Inside Llewyn Davis, Hail Caesar and other projects. Joel married actress Frances McDormand in 1984 and had an adopted son.",
-        "Birth": 1954
-    },
-    "ImageURL": "https://upload.wikimedia.org/wikipedia/en/3/35/Biglebowskiposter.jpg",
-    "Featured": false
-  },
-  {
-    "Title": "Saving Private Ryan",
-    "Description": "Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action.",
-    "ReleaseYear": 1998,
     "Genre": {
         "Name": "Drama",
-        "Description": "In film and television, drama is a category or genre of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.[1] Drama of this kind is usually qualified with additional terms that specify its particular super-genre, macro-genre, or micro-genre,[2] such as soap opera, police crime drama, political drama, legal drama, historical drama, domestic drama, teen drama, and comedy-drama (dramedy). These terms tend to indicate a particular setting or subject-matter, or else they qualify the otherwise serious tone of a drama with elements that encourage a broader range of moods. To these ends, a primary element in a drama is the occurrence of conflict—emotional, social, or otherwise—and its resolution in the course of the storyline."
+        "Description": "In film and television, drama is a category or genre of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone. Drama of this kind is usually qualified with additional terms that specify its particular super-genre, macro-genre, or micro-genre, such as soap opera, police crime drama, political drama, legal drama, historical drama, domestic drama, teen drama, and comedy-drama (dramedy). These terms tend to indicate a particular setting or subject-matter, or else they qualify the otherwise serious tone of a drama with elements that encourage a broader range of moods. To these ends, a primary element in a drama is the occurrence of conflict—emotional, social, or otherwise—and its resolution in the course of the storyline."
     },
     "Director": {
-        "Name": "Steven Spielberg",
-        "Bio": "One of the most influential personalities in the history of cinema, Steven Spielberg is Hollywood's best known director and one of the wealthiest filmmakers in the world. He has an extraordinary number of commercially successful and critically acclaimed credits to his name, either as a director, producer or writer since launching the summer blockbuster with Jaws (1975), and he has done more to define popular film-making since the mid-1970s than anyone else.",
-        "Birth": 1946
+        "Name": "Kenny Ortega",
+        "Bio": "Kenny Ortega was born on April 18, 1950 in Palo Alto, California, USA. He is known for Hull High (1990), XIX Winter Olympics Opening Ceremony (2002) and High School Musical 3: Senior Year (2008).",
+        "Birth": 1950
     },
-    "ImageURL": "https://upload.wikimedia.org/wikipedia/en/a/ac/Saving_Private_Ryan_poster.jpg",
-    "Featured": false
+    "_id": "62e9a619e4da723567a25c5c",
+    "Title": "Newsies",
+    "Description": "A musical based on the New York City newsboy strike of 1899. When young newspaper sellers are exploited beyond reason by their bosses they set out to enact change and are met by the ruthlessness of big business.",
+    "ReleaseYear": 1992,
+    "ImageURL": "https://upload.wikimedia.org/wikipedia/en/5/53/Newsies-Poster.jpg",
+    "Featured": false,
+    "Stars": [
+        "Christian Bale",
+        "Bill Pullman",
+        "Robert Duvall"
+    ]
   }
+]
+</span>
+      </td>
+    </tr>
+    <tr>
+      <td>Add new movies to the database</td>
+      <td>POST</td>
+      <td>JSON object holding data about the new movie
+<span class="example-text">
+{
+  "Title": "New Movie",
+  "Description": "A movie description.",
+  "ReleaseYear": 2022,
+  "Genre": {
+      "Name": "Action",
+      "Description": "Action description"
+  },
+  "Director": {
+      "Name": "DirectorName",
+      "Bio": "A director bio",
+      "Birth": 2022
+  },
+  "Stars": ["star1", "star2", "star3"],
+  "ImageURL": "image_url.jpg",
+  "Featured": false
+}
+</span>
+      </td>
+      <td>/movies</td>
+      <td>A text message indicating whether or not the movie was successfully added to the database</td>
+    </tr>
+    <tr>
+      <td>Provide the ability to remove movies from the database</td>
+      <td>DELETE</td>
+      <td>None</td>
+      <td>/movies/:movieTitle</td>
+      <td>A text message indicating whether or not the movie was successfully removed from the database</td>
+    </tr>
+    <tr>
+      <td>Return a list with the data of all registered users</td>
+      <td>GET</td>
+      <td>None</td>
+      <td>/users</td>
+      <td>A JSON object containing an array of all users and their data including usernames, 
+        passwords, emails, birthdays and favortie-movie arrays
+      </td>
+    </tr>
+    <tr>
+      <td>Return all data from a specific registered user</td>
+      <td>GET</td>
+      <td>None</td>
+      <td>/users/:username</td>
+      <td>A JSON object containing a specific user's data including their username, 
+        password, email, birthday and favorite-movie array
+<span class="example-text">
+{
+  "username": "Joe",
+  "password": "testing12345",
+  "email": "joe@example.com",
+  "birth_date": "08/22/1992",
+  "favoriteMovies": [
+      "62e9a4f4e4da723567a25c55"
+  ]
+}
+</span>
+      </td>
+    </tr>
+    <tr>
+      <td>Return the titles of any favorite movies that a user may have</td>
+      <td>GET</td>
+      <td>None</td>
+      <td>/users/:username/favoriteMovies</td>
+      <td>A JSON object containing an array of every movie title that a specific user has added to their favorites list
+<span class="example-text">
+[
+  "62e9a5b4e4da723567a25c56",
+  "62e9a5e2e4da723567a25c58"
 ]
 </span>
       </td>
@@ -142,30 +218,18 @@
     <tr>
       <td>Allow new users to register</td>
       <td>POST</td>
-      <td>JSON object holding data about the new user including their name and favoriteMovies 
+      <td>JSON object holding data about the new user including their username, password, email and birthday
 <span class="example-text">
 {
-  "name": "Jane Doe",
-  "favoriteMovies": [
-      "Animal World",
-      "Pulp Fiction"
-  ]
+  "username": "Jane Doe",
+  "Password": "t3st1ng",
+  "Email": "jane@example.com",
+  "Birthday": "10/22/88"
 }
 </span>
       </td>
       <td>/users</td>
-      <td>A JSON object containing data about the new user including their name, favoriteMovies and id
-<span class="example-text">
-{
-  "name": "Jane Doe",
-  "favoriteMovies": [
-      "Animal World",
-      "Pulp Fiction"
-  ],
-  "id": "77c384ff-6c12-4b16-bebc-ee347468ad77"
-}
-</span>
-      </td>
+      <td>A text message indicating whether or not the new user was successfully added</td>
     </tr>
     <tr>
       <td>Allow users to update their user info</td>
@@ -173,16 +237,23 @@
       <td>A JSON object containing data to update the given user's name
 <span class="example-text">
 {
-  "name": "Kim Jones"
+  "Username": "Sam Jones"
 }
 </span>
       </td>
       <td>/users/:id</td>
       <td>A JSON object containing data about the user including their id and the new username
 <span class="example-text">
-{
-  "id": 1,
-  "name": "Kim Jones"
+  {
+    "username": "Sam Jones",
+    "password": "drowssap",
+    "email": "sam@example.com",
+    "birth_date": "02/27/1994",
+    "favoriteMovies": [
+        "62e9a43ee4da723567a25c53",
+        "62e9a619e4da723567a25c5b",
+        "62e9a619e4da723567a25c59"
+    ]
 }
 </span>
       </td>
@@ -191,37 +262,22 @@
       <td>Allow users to add a movie to their list of favorites</td>
       <td>POST</td>
       <td>None</td>
-      <td>/users/:id/:movieTitle</td>
+      <td>/users/:username/movies/:movieID</td>
       <td>A text message indicating whether or not the movie was successfully added to the user's array</td>
     </tr>
     <tr>
       <td>Allow users to remove a movie from their list of favorites</td>
       <td>DELETE</td>
       <td>None</td>
-      <td>/movies/:id/:movieTitle</td>
+      <td>/users/:username/movies/:movieID</td>
       <td>A text message indicating whether or not the movie was successfully removed from the user's array</td>
     </tr>
     <tr>
       <td>Allow existing users to deregister</td>
       <td>DELETE</td>
       <td>None</td>
-      <td>/users/:id</td>
+      <td>/users/:username</td>
       <td>A text message indicating whether or not the user's data has been successfully deleted</td>
-    </tr>
-    <tr>
-      <td>Return the titles of any favorite movies that a user may have</td>
-      <td>GET</td>
-      <td>None</td>
-      <td>/users/:id/favoriteMovies</td>
-      <td>A JSON object containing an array of every movie title that a specific user has added to their favorites list
-<span class="example-text">
-[
-  "Animal World",
-  "Saving Private Ryan",
-  "The Big Lebowski"
-]
-</span>
-      </td>
     </tr>
   </table>
 </body>
