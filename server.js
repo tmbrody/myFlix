@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
+const { check, validationResult } = require('express-validator');
 
 const mongoose = require('mongoose');
 const Models = require('./models');
@@ -19,9 +20,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(morgan('common'));
 
+const cors = require('cors');
+app.use(cors());
+
 let auth = require('./auth')(app);
 const passport = require('passport');
 require('./passport');
+
 
 app.get('/', (req, res) => {
   res.send('<h1>Welcome to the myFlix API</h1>');
@@ -64,7 +69,17 @@ passport.authenticate('jwt', { session: false }), (req, res) => {
 });
 
 app.put('/users/:Username', 
-passport.authenticate('jwt', { session: false }), (req, res) => {
+[
+  check('username', 
+  'username contains non-alphanumeric characters - not allowed').isAlphanumeric(),
+  check('Email', 'Email does not appear to be valid').isEmail()
+], passport.authenticate('jwt', { session: false }), (req, res) => {
+  let errors = validationResult(req);
+
+  if (!errors.isEmpty()) {
+    return res.status(422).json({ errors: errors.array() });
+  }
+
   Users.findOneAndUpdate({ username: req.params.Username }, { $set: 
     {
       username: req.body.Username,
@@ -99,7 +114,21 @@ passport.authenticate('jwt', { session: false }), (req, res) => {
   })
 });
 
-app.post('/users', (req, res) => {
+app.post('/users',
+[
+  check('username', 'Username is required').isLength({min: 3}),
+  check('username', 
+  'Username contains non-alphanumeric characters - not allowed').isAlphanumeric(),
+  check('password', 'Password is required').not().isEmpty(),
+  check('Email', 'Email does not appear to be valid').isEmail()
+], (req, res) => {
+  let errors = validationResult(req);
+
+  if (!errors.isEmpty()) {
+    return res.status(422).json({ errors: errors.array() });
+  }
+
+  let hashedPassword = Users.hashPassword(req.body.password);
   Users.findOne({ username: req.body.username })
     .then((user) => {
       if (user) {
@@ -108,7 +137,7 @@ app.post('/users', (req, res) => {
         Users
           .create({
             username: req.body.username,
-            password: req.body.Password,
+            password: hashedPassword,
             Email: req.body.Email,
             Birthday: req.body.Birthday
           })
@@ -222,6 +251,7 @@ app.use((err, req, res, next) => {
   res.status(500).send('Something went wrong!');
 });
 
-app.listen(8080, () => {
-  console.log('Your app is listening on port 8080.');
+const port = process.env.PORT || 8080
+app.listen(port, '0.0.0.0', () => {
+  console.log('Your app is listening on port ' + port);
 });
