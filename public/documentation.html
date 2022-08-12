@@ -45,7 +45,7 @@
       <td>Return data about a single movie by title to the user</td>
       <td>GET</td>
       <td>None</td>
-      <td>/movies/:title</td>
+      <td>/movies/:movieTitle</td>
       <td>A JSON object containing all data about a single movie including its description, genre, director, image URL and whether it's featured or not
 <span class="example-text">
 {
@@ -139,40 +139,6 @@
       </td>
     </tr>
     <tr>
-      <td>Add new movies to the database</td>
-      <td>POST</td>
-      <td>JSON object holding data about the new movie
-<span class="example-text">
-{
-  "Title": "New Movie",
-  "Description": "A movie description.",
-  "ReleaseYear": 2022,
-  "Genre": {
-      "Name": "Action",
-      "Description": "Action description"
-  },
-  "Director": {
-      "Name": "DirectorName",
-      "Bio": "A director bio",
-      "Birth": 2022
-  },
-  "Stars": ["star1", "star2", "star3"],
-  "ImageURL": "image_url.jpg",
-  "Featured": false
-}
-</span>
-      </td>
-      <td>/movies</td>
-      <td>A text message indicating whether or not the movie was successfully added to the database</td>
-    </tr>
-    <tr>
-      <td>Provide the ability to remove movies from the database</td>
-      <td>DELETE</td>
-      <td>None</td>
-      <td>/movies/:movieTitle</td>
-      <td>A text message indicating whether or not the movie was successfully removed from the database</td>
-    </tr>
-    <tr>
       <td>Return a list with the data of all registered users</td>
       <td>GET</td>
       <td>None</td>
@@ -190,6 +156,7 @@
         password, email, birthday and favorite-movie array
 <span class="example-text">
 {
+  "_id": "62f5bf9c3c88b8fcbed91136",
   "username": "Joe",
   "password": "testing12345",
   "email": "joe@example.com",
@@ -241,10 +208,11 @@
 }
 </span>
       </td>
-      <td>/users/:id</td>
+      <td>/users/:username</td>
       <td>A JSON object containing data about the user including their id and the new username
 <span class="example-text">
   {
+    "_id": "62f5bf9c3c88b8fcbed91137",
     "username": "Sam Jones",
     "password": "drowssap",
     "email": "sam@example.com",
