@@ -29,7 +29,7 @@ let directorSchema = mongoose.Schema({
 
 let userSchema = mongoose.Schema({
   username: {type: String, required: true},
-  Password: {type: String, required: true},
+  password: {type: String, required: true},
   Email: {type: String, required: true},
   Birthday: Date,
   favoriteMovies: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Movie' }]
@@ -40,7 +40,9 @@ let Genre = mongoose.model('Genre', genreSchema);
 let Director = mongoose.model('Director', directorSchema);
 let User = mongoose.model('User', userSchema);
 
-module.exports.Movie = Movie;
-module.exports.Genre = Genre;
-module.exports.Director = Director;
-module.exports.User = User;
+module.exports = { 
+  Movie,
+  Genre,
+  Director,
+  User
+};
