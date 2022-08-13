@@ -6,12 +6,13 @@ const { check, validationResult } = require('express-validator');
 const mongoose = require('mongoose');
 const Models = require('./models');
 
-const Movies = Models.Movie,
-  Genres = Models.Genre,
-  Directors = Models.Director,
-  Users = Models.User;
+const Movies = Models.Movie;
+const Genres = Models.Genre;
+const Directors = Models.Director;
+const Users = Models.User;
 
-mongoose.connect('mongodb://localhost:27017/myFlixDB');
+mongoose.connect(process.env.CONNECTION_URI, 
+{ useNewUrlParser: true, useUnifiedTopology: true });
 
 const app = express();
 
