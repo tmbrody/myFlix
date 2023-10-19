@@ -9,39 +9,38 @@ let Users = Models.User,
 
 passport.use(new LocalStrategy({
   usernameField: 'username',
-  passwordField: 'Password'
-}, (username, password, callback) => {
-  console.log(username + '  ' + password);
+  passwordField: 'password'
+}, (username, password, done) => {
   Users.findOne({ username: username }, (error, user) => {
     if (error) {
       console.log(error);
-      return callback(error);
+      return done(error);
     }
 
     if (!user) {
       console.log('incorrect username');
-      return callback(null, false, {message: 'Incorrect username or password.'});
+      return done(null, false, {message: 'Incorrect username or password.'});
     }
 
     if (!user.validatePassword(password)) {
       console.log('incorrect password');
-      return callback(null, false, {message: 'Incorrect password.'});
+      return done(null, false, {message: 'Incorrect password.'});
     }
 
     console.log('finished');
-    return callback(null, user);
+    return done(null, user);
   });
 }));
 
+// authenticate users based on the JWT submitted alongside their request
 passport.use(new JWTStrategy({
   jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
   secretOrKey: 'your_jwt_secret'
-}, (jwtPayload, callback) => {
-  return Users.findById(jwtPayload._id)
-    .then((user) => {
-      return callback(null, user);
-    })
-    .catch((error) => {
-      return callback(error)
-    });
+}, async (jwtPaylod, done) => {
+  try {
+    const user = await Users.findById(jwtPaylod._id);
+    return done(null, user);
+  } catch (error) {
+    return done(error);
+  }
 }));

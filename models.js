@@ -31,8 +31,8 @@ let directorSchema = mongoose.Schema({
 let userSchema = mongoose.Schema({
   username: {type: String, required: true},
   password: {type: String, required: true},
-  Email: {type: String, required: true},
-  Birthday: Date,
+  email: {type: String, required: true},
+  birthday: Date,
   favoriteMovies: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Movie' }]
 });
 
